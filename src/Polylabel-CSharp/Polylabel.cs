@@ -77,7 +77,7 @@ namespace Polylabel_CSharp
 
             if (debug)
             {
-                Console.WriteLine($"Num probes: {numProbes}");
+                Console.WriteLine($"Number probes: {numProbes}");
                 Console.WriteLine($"Best distance: {bestCell.D}");
             }
 

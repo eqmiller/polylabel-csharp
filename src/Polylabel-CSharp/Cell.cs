@@ -41,11 +41,10 @@ namespace Polylabel_CSharp
         /// <summary>
         /// Signed distance from point to polygon outline (negative if point is outside)
         /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <param name="polygon"></param>
-        /// <returns></returns>
-        public double PointToPolygonDist(double x, double y, double[][][] polygon)
+        /// <param name="x">Cell center x</param>
+        /// <param name="y">Cell center y</param>
+        /// <param name="polygon">Full GeoJson like Polygon</param>
+        private double PointToPolygonDist(double x, double y, double[][][] polygon)
         {
             var inside = false;
             var minDistSq = double.PositiveInfinity;
@@ -72,9 +71,9 @@ namespace Polylabel_CSharp
         }
 
         /// <summary>
-        /// Get suqared distance from a point to a segment
+        /// Get squared distance from a point to a segment
         /// </summary>
-        public double GetSegDistSq(double px, double py, double[] a, double[] b)
+        private double GetSegDistSq(double px, double py, double[] a, double[] b)
         {
             var x = a[0];
             var y = a[1];
