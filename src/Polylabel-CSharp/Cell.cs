@@ -39,7 +39,7 @@ namespace Polylabel_CSharp
         public double Max { get; }
 
         /// <summary>
-        /// Signed distance from point to polygon outline (negitive if point is outside)
+        /// Signed distance from point to polygon outline (negative if point is outside)
         /// </summary>
         /// <param name="x"></param>
         /// <param name="y"></param>
